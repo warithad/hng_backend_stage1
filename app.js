@@ -15,7 +15,7 @@ app.use('/api', (req, res, next) => {
     const date = new Date()
 
     const current_day = weekDays[date.getDay()]
-    const utc_time = date.toUTCString()
+    const utc_time = date.toISOString()
 
     const slack_name = req.query.slack_name 
     const track = req.query.track
